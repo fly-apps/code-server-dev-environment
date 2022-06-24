@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TIME_TO_SHUTDOWN="${IDLE_TIME_TO_SHUTDOWN:-120}"
+TIME_TO_SHUTDOWN=3600
 
 mkdir -p /project
 
