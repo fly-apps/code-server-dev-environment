@@ -24,8 +24,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN curl -L https://fly.io/install.sh | sh \
     && echo 'export FLYCTL_INSTALL="/root/.fly"' >> ~/.bashrc \
     && echo 'export PATH="$FLYCTL_INSTALL/bin:$PATH"' >> ~/.bashrc \
-    && code-server --install-extension elixir-lsp.elixir-ls \
-    && code-server --install-extension FlyIoStaging.fly-extension
+    && code-server --install-extension elixir-lsp.elixir-ls
 
 COPY --from=proxy /tired-proxy /tired-proxy
 
